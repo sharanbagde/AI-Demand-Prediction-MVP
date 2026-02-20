@@ -3,7 +3,6 @@ import pandas as pd
 import pickle
 import streamlit as st
 
-
 # Load trained model
 with open("demand_model.pkl", "rb") as f:
     model = pickle.load(f)
