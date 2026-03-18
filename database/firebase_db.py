@@ -4,12 +4,11 @@ import streamlit as st
 import os
 
 if not firebase_admin._apps:
-
     try:
         # Cloud (Streamlit)
         cred = credentials.Certificate(dict(st.secrets["firebase"]))
     except:
-        # Local
+        # Local (your PC)
         base_dir = os.path.dirname(os.path.dirname(__file__))
         json_path = os.path.join(base_dir, "firebase_key.json")
         cred = credentials.Certificate(json_path)
